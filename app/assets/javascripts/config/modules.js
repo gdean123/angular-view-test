@@ -1,0 +1,1 @@
+viewTest = angular.module('viewTest', ['ngRoute']);
