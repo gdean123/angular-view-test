@@ -9,3 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 group :test do
   gem 'rspec-rails'
 end
+
+group :development, :test do
+  gem 'jasmine'
+end
