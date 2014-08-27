@@ -11,6 +11,10 @@
 #   - dist/**/*.js
 #
 src_files:
+  - assets/angular/angular.js
+  - assets/angular-mocks/angular-mocks.js
+  - assets/jquery/dist/jquery
+  - assets/jasmine-jquery/lib/jasmine-jquery.js
   - assets/application.js
 
 # stylesheets
