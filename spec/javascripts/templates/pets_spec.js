@@ -6,6 +6,6 @@ describe("Pets", function () {
     }));
 
     it("displays the pet name", function () {
-        expect(this.view.text()).toEqual("\n    Pet name: Sox\n");
+        expect(this.view).toHaveText("Pet name: Sox");
     });
 });
