@@ -1,1 +1,1 @@
-viewTest = angular.module('viewTest', ['ngRoute']);
+viewTest = angular.module('viewTest', ['ngRoute', 'templates/pets']);

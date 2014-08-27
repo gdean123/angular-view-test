@@ -6,4 +6,6 @@
 //= require config/modules
 //= require config/routes
 
+//= require templates/pets
+
 //= require_tree .
