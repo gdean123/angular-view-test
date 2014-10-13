@@ -1,8 +1,7 @@
 describe("Pets", function () {
-    beforeEach(inject(function ($rootScope, renderTemplate) {
-        this.$scope = $rootScope.$new();
-        this.$scope.name = "Sox";
-        this.view = renderTemplate('pets', this.$scope);
+    beforeEach(inject(function ($scope, renderTemplate) {
+        $scope.name = "Sox";
+        this.view = renderTemplate('pets', $scope);
     }));
 
     it("displays the pet name", function () {

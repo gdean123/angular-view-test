@@ -1,6 +1,6 @@
 describe("PetsController", function () {
-    beforeEach(inject(function ($rootScope, $controller) {
-        this.$scope = $rootScope.$new();
+    beforeEach(inject(function ($scope, $controller) {
+        this.$scope = $scope;
         $controller('PetsController', { $scope: this.$scope });
     }));
 
