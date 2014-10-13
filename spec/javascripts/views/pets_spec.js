@@ -1,10 +1,24 @@
 describe("Pets", function () {
+    var view;
+
     beforeEach(inject(function ($scope, renderTemplate) {
-        $scope.name = "Sox";
-        this.view = renderTemplate('pets', $scope);
+        $scope.pets = [
+            { name: "Sox", age: 5 },
+            { name: "Jake", age: 2 }
+        ];
+
+        view = renderTemplate('pets', $scope);
     }));
 
-    it("displays the pet name", function () {
-        expect(this.view).toHaveText("Pet name: Sox");
+    function petCard(index) {
+        return view.find(".pet-card")[index];
+    }
+
+    it("shows a card for each pet", function () {
+        expect(petCard(0)).toContainText("Sox");
+        expect(petCard(0)).toContainText("Age 5");
+
+        expect(petCard(1)).toContainText("Jake");
+        expect(petCard(1)).toContainText("Age 2");
     });
 });

@@ -1,3 +1,4 @@
-<div ng-if="true">
-    Pet name: {{name}}
+<div class="pet-card" ng-repeat="pet in pets">
+    {{pet.name}}
+    Age {{pet.age}}
 </div>
