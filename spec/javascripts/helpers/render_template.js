@@ -1,9 +1,10 @@
-viewTest.service('renderTemplate', function($templateCache, $interpolate, $compile) {
+viewTest.service('renderTemplate', function($templateCache, $compile) {
     return function renderTemplate(template, $scope) {
         var templateHtml = $templateCache.get('templates/' + template);
-        var interpolatedTemplate = $interpolate(templateHtml)($scope);
-        var linkFunction = $compile(interpolatedTemplate);
+        var linkedElement = $compile(templateHtml)($scope);
+        var renderedElement = $('<div></div>').append(linkedElement);
+        $scope.$apply();
 
-        return linkFunction($scope);
+        return renderedElement;
     }
 });
