@@ -1,6 +1,3 @@
-viewTest.controller('PetsController', ['$scope', function($scope) {
-    $scope.pets = [
-        { name: "Mr. Bun Bun", age: 5 },
-        { name: "Hobbes", age: 2 }
-    ];
-}]);
+viewTest.controller('PetsController', function($scope, PetRepository) {
+    $scope.pets = PetRepository.getAll();
+});

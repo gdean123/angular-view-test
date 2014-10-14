@@ -1,4 +1,6 @@
-<div class="pet-card" ng-repeat="pet in pets">
-    {{pet.name}}
-    Age {{pet.age}}
+<div ng-controller="PetsController">
+    <div class="pet-card" ng-repeat="pet in pets">
+        {{pet.name}}
+        Age {{pet.age}}
+    </div>
 </div>

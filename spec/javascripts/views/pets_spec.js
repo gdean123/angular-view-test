@@ -1,11 +1,11 @@
 describe("Pets", function () {
     var view;
 
-    beforeEach(inject(function ($scope, renderTemplate) {
-        $scope.pets = [
+    beforeEach(inject(function ($scope, renderTemplate, PetRepository) {
+        spyOn(PetRepository, 'getAll').and.returnValue([
             { name: "Sox", age: 5 },
             { name: "Jake", age: 2 }
-        ];
+        ]);
 
         view = renderTemplate('pets', $scope);
     }));
